@@ -8,6 +8,7 @@ body{
     align-items: center;
     font-display: column;
     background: #EBF2F7 !important;
+    overflow-x: hidden !important;
     font-family: 'Baloo Tammudu 2', cursive;
 }
 :root{
@@ -139,14 +140,14 @@ body{
     .wrapper{
     margin-top: 50px;
     margin-bottom: 30px;
-    width: 900px !important;
+    width: 850px !important;
     border-radius: 20px !important;
     box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
     }
 
     .card-wrapper{
         display: grid;
-        padding: 4rem;
+        padding: 3rem;
         grid-template-columns: repeat(2,1fr);
         grid-column-gap: 0rem;
         grid-row-gap: 0rem;
@@ -158,28 +159,28 @@ body{
     .wrapper{
         margin-top: 50px;
         margin-bottom: 30px;
-        width: 700px !important;
+        width: 600px !important;
         border-radius: 20px !important;
         box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
     }
     .card-wrapper{
         display: grid;
-        padding: 2rem;
-        grid-template-columns: repeat(2,1fr);
+        padding: 8rem;
+        grid-template-columns: repeat(1,1fr);
         grid-column-gap: 0rem;
         grid-row-gap: 0rem;
     }
     .card-ver{
         border-radius: 10px !important;
         padding-top: 0px;
-        width: 300px;
+        width: 350px;
         font-family: 'Baloo Tammudu 2', cursive;
-        height: 200px;
+        height: 280px;
         box-shadow: 0px 8px 28px -6px rgba(19, 34, 68, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
     }
     .icons{
-        margin-top: 80px;
-        margin-left: 225px;
+        margin-top: 100px;
+        margin-left: 250px;
     }
     .edit{
         margin-right: 10px;
@@ -197,10 +198,19 @@ body{
     }
     .card-wrapper{
         display: grid;
-        padding: 1.5rem;
+        padding: 0.3rem;
+        padding-top: 2rem !important;
         grid-template-columns: repeat(1,1fr);
         grid-column-gap: 0rem;
         grid-row-gap: 0rem;
+    }
+    .card-ver{
+        border-radius: 10px !important;
+        padding-top: 0px;
+        width: 340px;
+        font-family: 'Baloo Tammudu 2', cursive;
+        height: 250px;
+        box-shadow: 0px 8px 28px -6px rgba(19, 34, 68, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
     }
     
 .top{
