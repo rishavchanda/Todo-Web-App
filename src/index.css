@@ -97,24 +97,26 @@ body{
 
 .name{
     margin-bottom: 0px !important;
-    padding: 5px;
     padding-top: 15px;
     padding-right: 10px;
     padding-left: 15px;
+    display: flex;
     border-top-left-radius: 10px !important;
     border-top-right-radius: 10px !important;
     box-shadow:rgba(19, 34, 68, 0.12) 0px -6px 6px -6px;
 }
+.title-card{
+    font-weight: bold;
+    margin-top: 2px;
+    font-size: 25px;
+    margin-right: 60px;
+}
 .desc{
     font-size: 17px;
 }
-
 .icons{
-    position: fixed;
-    margin-top: 60px;
-    margin-left: 20px;
-    display: flex;
-    width: 100%;
+    margin-top: 80px;
+    margin-left: 260px;
 }
 .edit{
     margin-right: 10px;
@@ -124,7 +126,7 @@ body{
     padding-top: 0px;
     width: 350px;
     font-family: 'Baloo Tammudu 2', cursive;
-    height: 200px;
+    height: 230px;
     box-shadow: 0px 8px 28px -6px rgba(19, 34, 68, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
 }
 
