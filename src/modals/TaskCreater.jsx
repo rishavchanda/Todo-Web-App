@@ -19,6 +19,8 @@ const TaskCreator = ({modal,toggle,save}) => {
         taskObj["Name"] = taskname
         taskObj["Description"] = description
         save(taskObj)
+        setDescription("")
+        setTaskName("")
     }
     return (
         <Modal isOpen={modal} toggle={toggle}>
