@@ -10,7 +10,13 @@ body{
     background: #EBF2F7 !important;
     font-family: 'Baloo Tammudu 2', cursive;
 }
+:root{
 
+    --amplify-primary-color: rgb(49, 255, 152);
+    --amplify-primary-tint: #000000;
+    --amplify-primary-shade: #2bffb8;
+  
+    }
 .wrapper{
     margin-top: 50px;
     margin-bottom: 30px;
@@ -102,9 +108,13 @@ body{
 .desc{
     font-size: 17px;
 }
+
 .icons{
-    margin-top: 80px;
-    margin-left: 270px;
+    position: fixed;
+    margin-top: 60px;
+    margin-left: 20px;
+    display: flex;
+    width: 100%;
 }
 .edit{
     margin-right: 10px;

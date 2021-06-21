@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react"
 import TaskCreater from '../modals/TaskCreater'
 import TodoCard from "./TodoCards"
+import {AmplifySignOut} from "@aws-amplify/ui-react"
 
 const TodoList = ()=>{
     const [modal, setModal] = useState(false);
@@ -50,9 +51,11 @@ const TodoList = ()=>{
              <button className="create-Btn" onClick={()=> setModal(true)}>Create a new Task</button>
          </div>
          <div className="card-wrapper">
-             {taskList && taskList.map((obj, index) => <TodoCard taskObj={obj} index={index} deleteTodo = {deleteTodo} updateListArray={updateListArray}/>)}
 
+             {taskList && taskList.map((obj, index) => <TodoCard taskObj={obj} index={index} deleteTodo = {deleteTodo} updateListArray={updateListArray}/>)}
+              
          </div>
+         <AmplifySignOut/>
          <TaskCreater toggle={toggle} modal={modal} save = {saveTask}/>
        </div>
    );

@@ -49,12 +49,13 @@ const TodoCards = ({ taskObj, index, deleteTodo,updateListArray }) => {
             <h5 tag="h5" className=" name" style={{"background": colors[index%6].secondaryColor}}>{taskObj.Name}</h5>
                 <CardBody>
                     <CardText tag="p" className=" desc">{taskObj.Description}</CardText>
-                    <div className="icons">
+                    
+                </CardBody>
+                <div className="icons">
+                        <p style={{"color" : "rgb(88, 88, 88)" , "font-weight" : "bold", "marginRight" : "150px"}}>{taskObj.DateTime}</p>
                         <i className="far fa-edit edit" style={{ "color": colors[index%6].primaryColor ,  "cursor" : "pointer"}} onClick= {() => setModal(true)}></i>
                         <i className="fas fa-trash" style={{ "color": colors[index%6].primaryColor , "cursor" : "pointer"}} onClick={deleteCard}></i>
-                    </div>
-                </CardBody>
-
+                </div>
             </div>
             <EditTask modal= {modal} toggle={toggle} updateTask={updateTask} taskObj={taskObj}/>
 
