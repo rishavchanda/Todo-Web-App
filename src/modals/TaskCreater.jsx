@@ -2,6 +2,7 @@ import React, {useState} from "react"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const TaskCreator = ({modal,toggle,save}) => {
+    const dateValue  = new Date("02/05/2021 10:30Am")
     const [taskname, setTaskName] = useState('');
     const [description, setDescription] = useState('');
 
@@ -35,8 +36,8 @@ const TaskCreator = ({modal,toggle,save}) => {
                        <label htmlFor="" className="label">Description:</label>
                        <textarea className="form-control" rows="5" value={description} onChange={handleChange} name="description"></textarea>
                    </div>
-
                </form>
+              
             </ModalBody>
             <ModalFooter>
                 <Button className="createBtn" onClick={toggle} onClick={saveTask}>Create</Button>{' '}
