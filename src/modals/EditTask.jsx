@@ -1,7 +1,6 @@
-import React, {useState} from "react"
+import React, {useState,useEffect} from "react"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-const TaskCreator = ({modal,toggle,save}) => {
+const EditTask = ({modal,toggle,updateTask,taskObj}) => {
     const [taskname, setTaskName] = useState('');
     const [description, setDescription] = useState('');
 
@@ -13,16 +12,20 @@ const TaskCreator = ({modal,toggle,save}) => {
             setDescription(value)
         }
     }
-
-    const saveTask = () =>{
-        let taskObj = {}
-        taskObj["Name"] = taskname
-        taskObj["Description"] = description
-        save(taskObj)
+    useEffect(()=>{
+        setTaskName(taskObj.Name)
+        setDescription(taskObj.Description)
+    },[])
+    const update = (e) =>{
+        e.preventDefault();
+        let editObj = {}
+        editObj["Name"] = taskname
+        editObj["Description"] = description
+        updateTask(editObj)
     }
     return (
         <Modal isOpen={modal} toggle={toggle}>
-            <ModalHeader toggle={toggle}>Create Your Todo</ModalHeader>
+            <ModalHeader toggle={toggle}>Edit Your Todo</ModalHeader>
             <ModalBody>
                <form action="">
                    <div className="form-group">
@@ -37,11 +40,11 @@ const TaskCreator = ({modal,toggle,save}) => {
                </form>
             </ModalBody>
             <ModalFooter>
-                <Button className="createBtn" onClick={toggle} onClick={saveTask}>Create</Button>{' '}
+                <Button className="createBtn" onClick={toggle} onClick={update}>Update</Button>{' '}
                 <Button className="cancelBtn" onClick={toggle}>Cancel</Button>
             </ModalFooter>
         </Modal>
     );
 };
 
-export default TaskCreator;
+export default EditTask;

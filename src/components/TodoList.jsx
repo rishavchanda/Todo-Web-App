@@ -4,7 +4,7 @@ import TodoCard from "./TodoCards"
 
 const TodoList = ()=>{
     const [modal, setModal] = useState(false);
-    const [taskList, setTaskList] = useState([])
+    const [taskList, setTaskList] = useState([]);
 
     useEffect(()=>{
         let arr = localStorage.getItem("taskList")
@@ -26,6 +26,23 @@ const TodoList = ()=>{
         setModal(false)
     }
 
+    const deleteTodo = (index) => {
+        let tempList = taskList
+        tempList.splice(index,1)
+        localStorage.setItem("taskList", JSON.stringify(tempList))
+        setTaskList(tempList)
+        window.location.reload()
+    }
+
+    const updateListArray = (obj, index) => {
+        let editList = taskList
+        editList[index] = obj
+        localStorage.setItem("taskList", JSON.stringify(editList))
+        setTaskList(editList)
+        window.location.reload();
+
+    }
+
    return(
        <div className="wrapper">
          <div className="top text-center">
@@ -33,7 +50,7 @@ const TodoList = ()=>{
              <button className="create-Btn" onClick={()=> setModal(true)}>Create a new Task</button>
          </div>
          <div className="card-wrapper">
-             {taskList && taskList.map((obj, index) => <TodoCard taskObj={obj} index={index}/>)}
+             {taskList && taskList.map((obj, index) => <TodoCard taskObj={obj} index={index} deleteTodo = {deleteTodo} updateListArray={updateListArray}/>)}
 
          </div>
          <TaskCreater toggle={toggle} modal={modal} save = {saveTask}/>
